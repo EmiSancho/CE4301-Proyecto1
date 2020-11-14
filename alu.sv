@@ -21,8 +21,8 @@ module alu #(parameter n=32)(
 	
 	always @* begin
 		case(control)
-		6'b000000: begin AUXresult <= r_suma; auxN <= AuxNs; auxZ <= AuxZs; auxC <= AuxCs; auxV <= AuxVs; end
-		6'b000001: begin AUXresult <= r_resta; auxC <= AuxCr; auxN <= AuxNr; auxZ <= AuxZr; auxV <= AuxVr; end 
+		6'b000001: begin AUXresult <= r_suma; auxN <= AuxNs; auxZ <= AuxZs; auxC <= AuxCs; auxV <= AuxVs; end
+		6'b000010: begin AUXresult <= r_resta; auxC <= AuxCr; auxN <= AuxNr; auxZ <= AuxZr; auxV <= AuxVr; end 
 		
 		default: AUXresult <= 0;
 		endcase

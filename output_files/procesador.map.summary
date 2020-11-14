@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri Nov 13 18:58:28 2020
+Analysis & Elaboration Status : Successful - Sat Nov 14 00:44:57 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : procesador
-Top-level Entity Name : tb_data_memory
+Top-level Entity Name : tb_procesador
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

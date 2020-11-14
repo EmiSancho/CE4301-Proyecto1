@@ -1,0 +1,44 @@
+
+module td_procesador();
+	logic clk, rst;
+	
+	PROCESADOR UUT(clk,rst);
+	
+	initial begin
+	clk = 0;
+	rst = 1;
+	
+	#1
+	clk =~ clk;
+	rst =~ rst;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	#1
+	clk =~ clk;
+	
+	
+	
+	end
+
+
+endmodule

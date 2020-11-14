@@ -1,4 +1,5 @@
 # Reading pref.tcl
+# Load canceled
 # do procesador_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,47 +11,123 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:18:22 on Nov 13,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv 
-# -- Compiling module tb_data_memory
+# Start time: 00:52:48 on Nov 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v 
+# -- Compiling module instr_mem
 # 
 # Top level modules:
-# 	tb_data_memory
-# End time: 19:18:22 on Nov 13,2020, Elapsed time: 0:00:00
+# 	instr_mem
+# End time: 00:52:49 on Nov 14,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv}
+# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:18:22 on Nov 13,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv 
-# -- Compiling module data_memory
+# Start time: 00:52:49 on Nov 14,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv 
+# -- Compiling module _pc_counter_4
 # 
 # Top level modules:
-# 	data_memory
-# End time: 19:18:23 on Nov 13,2020, Elapsed time: 0:00:01
+# 	_pc_counter_4
+# End time: 00:52:49 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:52:49 on Nov 14,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv 
+# -- Compiling module _pc_counter
+# 
+# Top level modules:
+# 	_pc_counter
+# End time: 00:52:49 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:52:49 on Nov 14,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv 
+# -- Compiling module instruction_memory
+# 
+# Top level modules:
+# 	instruction_memory
+# End time: 00:52:49 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:52:49 on Nov 14,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv 
+# -- Compiling module PROCESADOR
+# 
+# Top level modules:
+# 	PROCESADOR
+# End time: 00:52:49 on Nov 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:52:49 on Nov 14,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv 
+# -- Compiling module tb_procesador
+# 
+# Top level modules:
+# 	tb_procesador
+# End time: 00:52:50 on Nov 14,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vsim work.tb_data_memory
-# vsim work.tb_data_memory 
-# Start time: 19:18:40 on Nov 13,2020
+vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver
+# vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver 
+# Start time: 00:53:01 on Nov 14,2020
 # Loading sv_std.std
-# Loading work.tb_data_memory
-# Loading work.data_memory
-add wave -position end  sim:/tb_data_memory/clk
-add wave -position end  sim:/tb_data_memory/we
-add wave -position end  sim:/tb_data_memory/a
-add wave -position end  sim:/tb_data_memory/wd
-add wave -position end  sim:/tb_data_memory/rd
-add wave -position end  sim:/tb_data_memory/mem
-add wave -position end  sim:/tb_data_memory/sig
-add wave -position end  sim:/tb_data_memory/cont
+# Loading work.tb_procesador
+# Loading work.PROCESADOR
+# Loading work._pc_counter
+# Loading work._pc_counter_4
+# Loading work.instruction_memory
+# Loading work.instr_mem
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_procesador/UUT/instMem File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 17
+run 100
+add wave -position end  sim:/tb_procesador/UUT/instMem/data
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: emily  Hostname: MAGGIE  ProcessID: 3296
-#           Attempting to use alternate WLF file "./wlftm46gi5".
+#           Attempting to use alternate WLF file "./wlftvs7b9x".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm46gi5
-run  50
-# Data memory TB...
-# End time: 19:21:05 on Nov 13,2020, Elapsed time: 0:02:25
-# Errors: 0, Warnings: 2
+#           Using alternate file: ./wlftvs7b9x
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_procesador/UUT/instMem File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 17
+# Break key hit
+vsim -gui -l msim_transcript -Lf altera_mf_ver work.tb_procesador
+# End time: 00:54:20 on Nov 14,2020, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 1
+# vsim -gui -l msim_transcript -Lf altera_mf_ver work.tb_procesador 
+# Start time: 00:54:20 on Nov 14,2020
+# Loading sv_std.std
+# Loading work.tb_procesador
+# Loading work.PROCESADOR
+# Loading work._pc_counter
+# Loading work._pc_counter_4
+# Loading work.instruction_memory
+# Loading work.instr_mem
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_procesador/UUT/instMem File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 17
+add wave -position end  sim:/tb_procesador/UUT/pcCounter/next
+add wave -position end  sim:/tb_procesador/UUT/pcCounter/actual
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: emily  Hostname: MAGGIE  ProcessID: 3296
+#           Attempting to use alternate WLF file "./wlft518fbj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft518fbj
+add wave -position end  sim:/tb_procesador/UUT/instMem/address
+add wave -position end  sim:/tb_procesador/UUT/instMem/data
+add wave -position 0  sim:/tb_procesador/UUT/instMem/clk
+run 500
+# End time: 00:58:01 on Nov 14,2020, Elapsed time: 0:03:41
+# Errors: 0, Warnings: 3

@@ -3,7 +3,8 @@
 
 module tb_instruction_memory();
 
-logic[31:0] a, d;
+logic[7:0] a;
+logic[31:0] d;
 logic clk;
 
 instruction_memory UUT(clk,a,d);

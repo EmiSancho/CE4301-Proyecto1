@@ -11,22 +11,22 @@ alu#(32)  UUT(a,b,control,c,n,z,v,salida);
 initial begin
 	a = 2;
 	b = 2;
-	control = 0;
+	control = 1;
 	
 	#5
 	a = 5;
 	b = 2;
-	control = 1;
+	control = 2;
 	
 	#5
 	a = 2;
 	b = 4;
-	control = 1;
+	control = 2;
 	
 	#5
 	a = 2;
 	b = 2;
-	control = 1;
+	control = 2;
 
 end
 
