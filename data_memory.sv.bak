@@ -1,0 +1,21 @@
+module data_memory(input logic CLK, WE,
+						input [31:0] A, WD,
+						output logic [31:0]  RD);
+						
+	logic [31:0] memory [255:0];
+	//WE Write Enable
+	
+	assign RD = memory[A[7:0]];
+		// Verificar implementación de memoria.
+	initial begin
+	$readmemh("C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.txt", memory);	
+	end
+
+	
+	always_ff @(posedge CLK) 
+	begin
+		if(WE)	memory[A[7:0]] <= WD;
+		$writememh("C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.txt", memory);
+	end
+	
+endmodule

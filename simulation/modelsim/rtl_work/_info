@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/emily/Desktop/CE4301-Proyecto1/simulation/modelsim
+vdata_memory
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1605316703
+!i10b 1
+!s100 [>Ni=NH3_go:cCBne4d;U0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZYagFN4bR5L8:gk@E7g7`1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1605315857
+8C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv
+FC:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv
+!i122 1
+L0 1 31
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1605316702.000000
+!s107 C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1
+Z8 tCvgOpt 0
+vtb_data_memory
+R1
+!s110 1605316702
+!i10b 1
+!s100 ?:ngFnjYmof3Nf@g2zic90
+R2
+I3QUfQT7P<gQZ^5[Ik@JcI0
+R3
+S1
+R0
+w1605316663
+8C:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv
+FC:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv
+!i122 0
+L0 1 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/tb_data_memory.sv|
+!i113 1
+R6
+R7
+R8

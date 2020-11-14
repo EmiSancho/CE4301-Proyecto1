@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at alu.sv(5): object "n" differs only in case from object "N" in the same scope File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 5
+Warning (10268): Verilog HDL information at data_memory.sv(18): always construct contains both blocking and non-blocking assignments File: C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv Line: 18

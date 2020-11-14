@@ -1,0 +1,15 @@
+module tb_instruction_memory();
+
+logic[31:0] a, d;
+logic clk;
+
+instruction_memory UUT(clk,a,d);
+
+initial begin 
+	$display("Instruction memory TB...");
+	a = 0;
+	 
+	always #5 clock <= ~clock;
+
+
+end

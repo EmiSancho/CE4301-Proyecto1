@@ -1,0 +1,33 @@
+module tb_alu();
+
+logic[3:0] a;
+logic[3:0] b;
+logic[3:0] control;
+logic c,n,z,v;
+logic[3:0] salida;
+
+alu#(4)  UUT(a,b,control,c,n,z,v,salida);
+
+initial begin
+	a = 2;
+	b = 2;
+	control = 0;
+	
+	#5
+	a = 5;
+	b = 2;
+	control = 1;
+	
+	#5
+	a = 2;
+	b = 4;
+	control = 1;
+	
+	#5
+	a = 2;
+	b = 2;
+	control = 1;
+
+end
+
+endmodule

@@ -1,0 +1,6 @@
+module tb_data_memory();
+	logic clk, we;
+	logic[31:0] a, wd, rd;
+	
+
+endmodule
