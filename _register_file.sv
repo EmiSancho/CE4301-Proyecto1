@@ -1,7 +1,7 @@
 //WE: Write enable
 //WD: Write data
 
-module _register_file(input clk, WE3,
+module _register_file(input clk, WE3,Rwe2,
 								input [2:0] A1, A2, A3,
 								input [31:0] WD3,
 								input rst,
@@ -34,6 +34,8 @@ module _register_file(input clk, WE3,
 		end else begin
 
 			if (WE3) register_file[A3] <= WD3;
+			
+			if (Rwe2) register_file[A3] <= i2;
 			end
 		end
 		

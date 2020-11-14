@@ -6,7 +6,8 @@ module _control_unit(input logic [31:0]instruccion,
 							output logic Mwe,
 							output logic [7:0] i1,//inmediatos
 							output logic [7:0] i2, //inmediatos
-							output Rwe
+							output Rwe,
+							output Rwe2
 //							output logic PCsrc,
 //							output logic MemtoReg,
 //							output logic AluSrc,
@@ -24,7 +25,9 @@ module _control_unit(input logic [31:0]instruccion,
 	logic[7:0] aux_i2;
 	logic[5:0] aux_alu_control;
 	logic aux_Rwe = 0;
+	logic aux_Rwe2 = 0;
 	logic aux_Mwe = 0;
+	
 	
 	muxControl mc(instruccion, aux_operacion, aux_r1,aux_r2,aux_destino,aux_i1,aux_i2);
 	
@@ -42,6 +45,11 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 							end
 							
+			6'b000011 : begin //MOV 
+									aux_alu_control = 6'b0;
+									aux_Rwe2 = 1;
+							end
+							
 			default: aux_alu_control = 6'b000000;				
 			
 		endcase
@@ -56,5 +64,6 @@ module _control_unit(input logic [31:0]instruccion,
 	assign i2 = aux_i2;
 	assign Rwe = aux_Rwe;
 	assign Mwe = aux_Mwe;
+	assign Rwe2 = aux_Rwe2;
 
 endmodule 

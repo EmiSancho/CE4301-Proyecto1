@@ -1,5 +1,5 @@
 Analysis & Elaboration report for procesador
-Sat Nov 14 13:12:09 2020
+Sat Nov 14 16:18:54 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Nov 14 13:12:09 2020       ;
+; Analysis & Elaboration Status ; Successful - Sat Nov 14 16:18:54 2020       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; procesador                                  ;
 ; Top-level Entity Name         ; tb_procesador                               ;
@@ -356,7 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 14 13:11:57 2020
+    Info: Processing started: Sat Nov 14 16:18:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -402,6 +402,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file tb_proc
     Info (12023): Found entity 1: tb_procesador File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file muxcontrol.sv
     Info (12023): Found entity 1: muxControl File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at PROCESADOR.sv(26): created implicit net for "Rwe2" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 26
 Info (12127): Elaborating entity "tb_procesador" for the top level hierarchy
 Warning (10755): Verilog HDL warning at tb_procesador.sv(10): assignments to clk create a combinational loop File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 10
 Info (12128): Elaborating entity "PROCESADOR" for hierarchy "PROCESADOR:UUT" File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 7
@@ -433,15 +434,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_omg1 File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_omg1" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "_control_unit" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 26
-Info (10264): Verilog HDL Case Statement information at _control_unit.sv(33): all case item expressions in this case statement are onehot File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 33
-Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(33): inferring latch(es) for variable "aux_Rwe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 33
-Info (10041): Inferred latch for "aux_Rwe" at _control_unit.sv(33) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 33
-Info (12128): Elaborating entity "muxControl" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 29
-Info (12128): Elaborating entity "_register_file" for hierarchy "PROCESADOR:UUT|_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 27
-Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(41): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at _register_file.sv(41): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 41
-Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(44): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at _register_file.sv(44): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 44
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe2", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_Rwe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_Rwe2" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (12128): Elaborating entity "muxControl" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 32
+Info (12128): Elaborating entity "_register_file" for hierarchy "PROCESADOR:UUT|_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 28
+Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(43): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at _register_file.sv(43): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 43
+Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(46): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at _register_file.sv(46): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 46
 Info (12128): Elaborating entity "muxRI" for hierarchy "PROCESADOR:UUT|_register_file:regFile|muxRI:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 13
 Warning (10240): Verilog HDL Always Construct warning at muxRI.sv(7): inferring latch(es) for variable "B", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
 Info (10041): Inferred latch for "B[0]" at muxRI.sv(7) File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
@@ -476,7 +478,7 @@ Info (10041): Inferred latch for "B[28]" at muxRI.sv(7) File: C:/Users/emily/Des
 Info (10041): Inferred latch for "B[29]" at muxRI.sv(7) File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
 Info (10041): Inferred latch for "B[30]" at muxRI.sv(7) File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
 Info (10041): Inferred latch for "B[31]" at muxRI.sv(7) File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
-Info (12128): Elaborating entity "alu" for hierarchy "PROCESADOR:UUT|alu:myAlu" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 28
+Info (12128): Elaborating entity "alu" for hierarchy "PROCESADOR:UUT|alu:myAlu" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 29
 Info (10264): Verilog HDL Case Statement information at alu.sv(23): all case item expressions in this case statement are onehot File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 23
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(23): inferring latch(es) for variable "auxN", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 23
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(23): inferring latch(es) for variable "auxZ", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 23
@@ -494,11 +496,11 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 5
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4775 megabytes
-    Info: Processing ended: Sat Nov 14 13:12:09 2020
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Sat Nov 14 16:18:54 2020
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +--------------------------------------------+

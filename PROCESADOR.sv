@@ -1,4 +1,4 @@
-
+//vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver
 module PROCESADOR(
 	input logic clk,
 	input logic rst
@@ -23,9 +23,11 @@ module PROCESADOR(
 _pc_counter 				pcCounter(clk,rst,pc4,pc);
 _pc_counter_4 				pcCouterMas4(pc, pc4);
 instruction_memory 		instMem(clk,pc,instruccion);
-_control_unit				contUnit(instruccion,aluControl,r1,r2,rDestino, Mwe,i1,i2,Rwe);
-_register_file				regFile(clk,Rwe,r1,r2,rDestino,S, rst,i2,A,B);
+_control_unit				contUnit(instruccion,aluControl,r1,r2,rDestino, Mwe,i1,i2,Rwe,Rwe2);
+
+_register_file				regFile(clk,Rwe,Rwe2,r1,r2,rDestino,S, rst,i2,A,B);
 alu							myAlu(A,B,aluControl,N,Z,C,V,S);
+							
 
 
 endmodule
