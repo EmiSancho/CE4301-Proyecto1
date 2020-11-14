@@ -16,8 +16,8 @@ module alu #(parameter n=32)(
 	logic auxN, auxZ, auxC,auxV;
 
 	// Códigos de la señal de control
-	logic[n-1:0] r_suma; adder_substractor #(n) sumador(A,B,r_suma,0,AuxCs, AuxNs, AuxZs, AuxVs); //0000 - suma
-	logic[n-1:0] r_resta; adder_substractor #(n) restador(A,B,r_resta,1,AuxCr, AuxNr, AuxZr, AuxVr); //0001 - resta
+	logic[n-1:0] r_suma; adder_substractor #(n) sumador(A,B,0,r_suma,AuxNs,AuxZs,AuxVs,AuxCs); //0000 - suma
+	logic[n-1:0] r_resta; adder_substractor #(n) restador(A,B,1,r_resta,AuxNr,AuxZr,AuxVr,AuxCr); //0001 - resta
 	
 	always @* begin
 		case(control)

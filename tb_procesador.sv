@@ -6,40 +6,15 @@ module tb_procesador();
 	
 	PROCESADOR UUT(clk,rst);
 	
+	 
+	always #1 clk = ~clk;
+
 	initial begin
-	clk = 0;
-	rst = 1;
-	
-	#1
-	clk =~ clk;
-	rst =~ rst;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	#1
-	clk =~ clk;
-	
-	
-	
+		clk = 0;
+		rst = 1;
+		
+		#1
+		rst =~ rst;
 	end
 
 

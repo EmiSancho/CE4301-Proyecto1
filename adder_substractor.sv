@@ -1,18 +1,18 @@
 
 
 
-module adder_substractor #(parameter WIDTH = 4)  ( A, B, S,SUBS, Cout,N,Z,V);
+module adder_substractor #(parameter WIDTH = 32)( 
 //El parámetro WIDTH define la cantidad de bits de entrada
 
-	input [WIDTH-1:0] A;// Primero numero binario de entrada
-	input [WIDTH-1:0] B;//segundo numero binario de entrada, se le aplica el complemento si la bandera SUBS es 1
-	input SUBS; //Bandera que corresponde aal funcionamieto del sumador, en caso de ser 1 resta
-	output [WIDTH-1:0] S;
-	output N;
-	output Z;
-	output V;
-	output Cout; //V method
-	
+	input [WIDTH-1:0] A,// Primero numero binario de entrada
+	input [WIDTH-1:0] B,//segundo numero binario de entrada, se le aplica el complemento si la bandera SUBS es 1
+	input SUBS, //Bandera que corresponde aal funcionamieto del sumador, en caso de ser 1 resta
+	output [WIDTH-1:0] S,
+	output N,
+	output Z,
+	output V,
+	output Cout //V method
+	);
 	genvar i;
 	genvar j;
 

@@ -5,8 +5,8 @@ module PROCESADOR(
 );
 
 //---------	VARIABLES
-	logic[31:0] pc = 0;
-	logic[31:0] pc4 = 0;
+	logic[7:0] pc = 0;
+	logic[7:0] pc4 = 0;
 	logic[31:0] instruccion = 0;
 	logic[5:0] aluControl = 0;
 	logic[2:0] r1 = 0;
@@ -16,17 +16,15 @@ module PROCESADOR(
 	logic[31:0] A,B,S = 0; //Primer, segundo operando y resultado de ALU 
 	logic N,Z,C,V = 0; // Negativo, Cero, Carry, Desbordamiento
 	logic Rwe = 0; //Register write enable
-	
+	logic Mwe = 0; //Memory write enable
 
 
 //--------- LLAMADAS
 _pc_counter 				pcCounter(clk,rst,pc4,pc);
 _pc_counter_4 				pcCouterMas4(pc, pc4);
 instruction_memory 		instMem(clk,pc,instruccion);
-_control_unit				contUnit(instruccion,aluControl,r1,r2,rDestino,i1,i2);
-
-_register_file				regFile(clk,Rwe,r1,r2,rDestino,S, rst,A,B);
-
+_control_unit				contUnit(instruccion,aluControl,r1,r2,rDestino, Mwe,i1,i2,Rwe);
+_register_file				regFile(clk,Rwe,r1,r2,rDestino,S, rst,i2,A,B);
 alu							myAlu(A,B,aluControl,N,Z,C,V,S);
 
 
