@@ -12,243 +12,189 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:05:57 on Nov 14,2020
+# Start time: 21:55:02 on Nov 14,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 20:05:57 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:02 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:05:58 on Nov 14,2020
+# Start time: 21:55:03 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv 
 # -- Compiling module mult
 # 
 # Top level modules:
 # 	mult
-# End time: 20:05:58 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:03 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:05:58 on Nov 14,2020
+# Start time: 21:55:03 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv 
 # -- Compiling module division
 # 
 # Top level modules:
 # 	division
-# End time: 20:05:58 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:03 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:05:58 on Nov 14,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv 
-# -- Compiling module bor
-# ** Error: C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv(9): (vlog-2110) Illegal reference to net "S".
-# ** Error: C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv(11): (vlog-2110) Illegal reference to net "S".
-# End time: 20:05:58 on Nov 14,2020, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./procesador_run_msim_rtl_verilog.do line 11
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv}"
-do procesador_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:22 on Nov 14,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 20:11:22 on Nov 14,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:22 on Nov 14,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv 
-# -- Compiling module mult
-# 
-# Top level modules:
-# 	mult
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv 
-# -- Compiling module division
-# 
-# Top level modules:
-# 	division
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
+# Start time: 21:55:03 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv 
 # -- Compiling module bor
 # 
 # Top level modules:
 # 	bor
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:03 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
+# Start time: 21:55:03 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv 
 # -- Compiling module band
 # 
 # Top level modules:
 # 	band
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv 
 # -- Compiling module muxRI
 # 
 # Top level modules:
 # 	muxRI
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv 
 # -- Compiling module _register_file
 # 
 # Top level modules:
 # 	_register_file
-# End time: 20:11:23 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:23 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv 
 # -- Compiling module _pc_counter_4
 # 
 # Top level modules:
 # 	_pc_counter_4
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:01
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv 
 # -- Compiling module _pc_counter
 # 
 # Top level modules:
 # 	_pc_counter
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv 
 # -- Compiling module _control_unit
-# ** Warning: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv(44): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv(45): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	_control_unit
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/full_adder.sv 
 # -- Compiling module full_adder
 # 
 # Top level modules:
 # 	full_adder
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:04 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/complement.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:04 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/complement.sv 
 # -- Compiling module complement
 # 
 # Top level modules:
 # 	complement
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:05 on Nov 14,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/adder_substractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:05 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/adder_substractor.sv 
 # -- Compiling module adder_substractor
 # 
 # Top level modules:
 # 	adder_substractor
-# End time: 20:11:24 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:05 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:24 on Nov 14,2020
+# Start time: 21:55:05 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv 
 # -- Compiling module instruction_memory
 # 
 # Top level modules:
 # 	instruction_memory
-# End time: 20:11:25 on Nov 14,2020, Elapsed time: 0:00:01
+# End time: 21:55:05 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:25 on Nov 14,2020
+# Start time: 21:55:05 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 20:11:25 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:05 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:25 on Nov 14,2020
+# Start time: 21:55:05 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv 
 # -- Compiling module PROCESADOR
 # 
 # Top level modules:
 # 	PROCESADOR
-# End time: 20:11:25 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:05 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:25 on Nov 14,2020
+# Start time: 21:55:05 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv 
 # -- Compiling module tb_procesador
 # 
 # Top level modules:
 # 	tb_procesador
-# End time: 20:11:25 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:06 on Nov 14,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/emily/Desktop/CE4301-Proyecto1 {C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:11:25 on Nov 14,2020
+# Start time: 21:55:06 on Nov 14,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1" C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv 
 # -- Compiling module muxControl
 # 
 # Top level modules:
 # 	muxControl
-# End time: 20:11:25 on Nov 14,2020, Elapsed time: 0:00:00
+# End time: 21:55:06 on Nov 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver
 # vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver 
-# Start time: 20:11:48 on Nov 14,2020
+# Start time: 21:55:09 on Nov 14,2020
 # Loading sv_std.std
 # Loading work.tb_procesador
 # Loading work.PROCESADOR
@@ -276,22 +222,11 @@ vsim -gui -l msim_transcript work.tb_procesador -Lf altera_mf_ver
 #    Time: 0 ps  Iteration: 0  Instance: /tb_procesador/UUT/myAlu/sumador File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 19
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'SUBS'. The port definition is at: C:/Users/emily/Desktop/CE4301-Proyecto1/adder_substractor.sv(9).
 #    Time: 0 ps  Iteration: 0  Instance: /tb_procesador/UUT/myAlu/restador File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 20
-add wave -position end  sim:/tb_procesador/clk
+add wave -position end  sim:/tb_procesador/UUT/regFile/register_file
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: emily  Hostname: MAGGIE  ProcessID: 3296
-#           Attempting to use alternate WLF file "./wlfta8gbh1".
+#           Attempting to use alternate WLF file "./wlft2yerhs".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfta8gbh1
-add wave -position end  sim:/tb_procesador/UUT/instruccion
-add wave -position end  sim:/tb_procesador/UUT/aluControl
-add wave -position end  sim:/tb_procesador/UUT/r1
-add wave -position end  sim:/tb_procesador/UUT/r2
-add wave -position end  sim:/tb_procesador/UUT/rDestino
-add wave -position end  sim:/tb_procesador/UUT/i1
-add wave -position end  sim:/tb_procesador/UUT/i2
-add wave -position end  sim:/tb_procesador/UUT/A
-add wave -position end  sim:/tb_procesador/UUT/B
-add wave -position end  sim:/tb_procesador/UUT/S
-run 100
-# End time: 20:21:21 on Nov 14,2020, Elapsed time: 0:09:33
+#           Using alternate file: ./wlft2yerhs
+# End time: 22:15:44 on Nov 14,2020, Elapsed time: 0:20:35
 # Errors: 0, Warnings: 4

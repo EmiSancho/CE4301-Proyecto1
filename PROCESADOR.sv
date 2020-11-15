@@ -27,7 +27,7 @@ _control_unit				contUnit(instruccion,aluControl,r1,r2,rDestino, Mwe,i1,i2,Rwe,R
 
 _register_file				regFile(clk,Rwe,Rwe2,r1,r2,rDestino,S, rst,i2,A,B);
 alu							myAlu(A,B,aluControl,N,Z,C,V,S);
-							
+						
 
 
 endmodule

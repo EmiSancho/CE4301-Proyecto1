@@ -8,7 +8,7 @@ module _register_file(input clk, WE3,Rwe2,
 								input[7:0] i2,
 								output logic [31:0] RD1, RD2);
 								
-	logic [63:0] register_file [31:0];
+	logic [31:0] register_file [7:0];
 	logic[31:0] aux_rd2;
 	muxRI mc(A2,i2,aux_rd2);
 	

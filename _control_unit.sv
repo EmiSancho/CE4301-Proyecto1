@@ -36,38 +36,45 @@ module _control_unit(input logic [31:0]instruccion,
 		case (aux_operacion)
 			6'b000001 : begin  //SUMA
 									aux_alu_control = 6'b000001;
+									aux_Rwe2 = 0;
 									aux_Rwe = 1;
 							end
 						
 						
 			6'b000010 : begin  //RESTA
 									aux_alu_control = 6'b0000010;
+									aux_Rwe2 = 0;
 									aux_Rwe = 1;
 							end
 							
 			6'b000011 : begin //MOV 
 									aux_alu_control = 6'b0;
 									aux_Rwe2 = 1;
+									aux_Rwe = 0;
 							end
 							
 			6'b000100 : begin //DIV 
 									aux_alu_control = 6'b000100;
 									aux_Rwe = 1;
+									aux_Rwe2 = 0;
 							end	
 			
 			6'b000101 : begin //MUL
 									aux_alu_control = 6'b000101;
 									aux_Rwe = 1;
+									aux_Rwe2 = 0;
 							end
 							
 			6'b000110 : begin //AND 
 									aux_alu_control = 6'b000110;
 									aux_Rwe = 1;
+									aux_Rwe2 = 0;
 							end
 							
 			6'b000111 : begin //OR 
 									aux_alu_control = 6'b000111;
 									aux_Rwe = 1;
+									aux_Rwe2 = 0;
 							end
 			
 			default: aux_alu_control = 6'b000000;				

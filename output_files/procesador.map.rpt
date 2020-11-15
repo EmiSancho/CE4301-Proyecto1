@@ -1,5 +1,5 @@
 Analysis & Elaboration report for procesador
-Sat Nov 14 20:05:44 2020
+Sat Nov 14 21:47:31 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -22,14 +22,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  14. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|mult:myMulti
  15. altsyncram Parameter Settings by Entity Instance
  16. Analysis & Elaboration Settings
- 17. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|band:myband"
- 18. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|bor:myOr"
- 19. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|adder_substractor:restador"
- 20. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|adder_substractor:sumador"
- 21. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu"
- 22. Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"
- 23. Analysis & Elaboration Messages
- 24. Analysis & Elaboration Suppressed Messages
+ 17. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|adder_substractor:restador"
+ 18. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|adder_substractor:sumador"
+ 19. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu"
+ 20. Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"
+ 21. Analysis & Elaboration Messages
+ 22. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -56,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Nov 14 20:05:44 2020       ;
+; Analysis & Elaboration Status ; Successful - Sat Nov 14 21:47:31 2020       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; procesador                                  ;
 ; Top-level Entity Name         ; tb_procesador                               ;
@@ -354,24 +352,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|band:myband"                                                                                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; S    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|bor:myOr"                                                                                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; S    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu|adder_substractor:restador"                                                                                                                                  ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -420,7 +400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 14 20:05:31 2020
+    Info: Processing started: Sat Nov 14 21:47:19 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -512,10 +492,6 @@ Info (10041): Inferred latch for "aux_Rwe2" at _control_unit.sv(36) File: C:/Use
 Info (10041): Inferred latch for "aux_Rwe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
 Info (12128): Elaborating entity "muxControl" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 32
 Info (12128): Elaborating entity "_register_file" for hierarchy "PROCESADOR:UUT|_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 28
-Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(43): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at _register_file.sv(43): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 43
-Warning (10027): Verilog HDL or VHDL warning at the _register_file.sv(46): index expression is not wide enough to address all of the elements in the array File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at _register_file.sv(46): truncated value with size 64 to match size of target (32) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 46
 Info (12128): Elaborating entity "muxRI" for hierarchy "PROCESADOR:UUT|_register_file:regFile|muxRI:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 13
 Warning (10240): Verilog HDL Always Construct warning at muxRI.sv(7): inferring latch(es) for variable "B", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
 Info (10041): Inferred latch for "B[0]" at muxRI.sv(7) File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv Line: 7
@@ -569,13 +545,13 @@ Info (12128): Elaborating entity "band" for hierarchy "PROCESADOR:UUT|alu:myAlu|
 Info (12128): Elaborating entity "mult" for hierarchy "PROCESADOR:UUT|alu:myAlu|mult:myMulti" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 24
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 5
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Sat Nov 14 20:05:44 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:34
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sat Nov 14 21:47:31 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +--------------------------------------------+
