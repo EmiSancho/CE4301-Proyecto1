@@ -2,16 +2,8 @@ module band #(parameter WIDTH = 32)(
 					input [WIDTH-1:0] A,
 					input [WIDTH-1:0] B,
 					
-					output S);
+					output logic[WIDTH-1:0] S);
 					
-					always @ (A or B) begin 
-					if (A == 1'b1 & B == 1'b'1) 
-						begin
-						S = 1'b1; 
-						end 
-					else 
-						begin
-						S = 1'b0;
-						end
+					assign S = A & B;
 				
 endmodule 
