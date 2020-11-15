@@ -1,9 +1,9 @@
-module tb_data_memory();
+module tb_image_memory();
 	logic clk, we;
-	logic[7:0] a; 
-	logic[31:0] wd, rd;
+	logic[31:0] a; 
+	logic[7:0] wd, rd;
 	
-	data_memory UUT(clk, we,a,wd,rd);
+	image_memory UUT(clk, we,a,wd,rd);
 	
 	always #1 clk = ~clk;
 	
