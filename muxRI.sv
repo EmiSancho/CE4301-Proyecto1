@@ -6,7 +6,9 @@ module muxRI(
 	always@(*)begin 
 		if(r2 == 31'b0)begin 
 				B = i2;
-		end
+		end else begin
+			B = 31'b0;
+			end
 	end
 	
 endmodule

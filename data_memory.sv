@@ -1,5 +1,5 @@
 module data_memory(input logic CLK, WE,
-						input [7:0] A,
+						input [31:0] A,
 						input [31:0] WD,
 						output logic [31:0]  RD);
 						

@@ -7,18 +7,15 @@ module adder_substractor #(parameter WIDTH = 32)(
 	input [WIDTH-1:0] A,// Primero numero binario de entrada
 	input [WIDTH-1:0] B,//segundo numero binario de entrada, se le aplica el complemento si la bandera SUBS es 1
 	input SUBS, //Bandera que corresponde aal funcionamieto del sumador, en caso de ser 1 resta
-	output [WIDTH-1:0] S,
-	output N,
-	output Z,
-	output V,
-	output Cout //V method
+	output [WIDTH-1:0] S
+	
 	);
 	genvar i;
 	genvar j;
 
-	logic [WIDTH:0] AuxCarry;
-	logic [WIDTH-1:0] AuxB;
-	logic [WIDTH-1:0] AuxZero;
+	logic [WIDTH:0] AuxCarry = 0;
+	logic [WIDTH-1:0] AuxB = 0;
+	logic [WIDTH-1:0] AuxZero =0;
 
 	generate
 
@@ -39,20 +36,20 @@ module adder_substractor #(parameter WIDTH = 32)(
 		 
 		 //Se toman los valores de la iteracion anterior y se aliementan al circuito 
 			  full_adder bitAdder(A[i],AuxB[i],AuxCarry[i-1],S[i],AuxCarry[i]);
-			  or (AuxZero[i],S[i],AuxZero[i-1]);
+			  //or (AuxZero[i],S[i],AuxZero[i-1]);
 		 end	
 	end
 	
 		//Se asigna Cout a la variable auxiliar de carry
-		 assign Cout = AuxCarry[WIDTH-1];
+		 //assign Cout = AuxCarry[WIDTH-1];
 			//Se calcula si el numero de salida es Z
-		 not  (Z,AuxZero[WIDTH-1]);
+		 //not  (Z,AuxZero[WIDTH-1]);
 		 
 		 //El negativo se da si se tiene 0 como carry y está en modo de resta
-		 and Negative (N,SUBS,~Cout);
+		 //and Negative (N,SUBS,~Cout);
 		 
 		 //Overflow se da cuando está en modo de sum y tenemos un carryOut
-		 and Overflow(V,~SUBS,Cout);
+		 //and Overflow(V,~SUBS,Cout);
 	 
 	endgenerate
 

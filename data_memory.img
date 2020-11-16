@@ -1,15 +1,15 @@
 // memory data file (do not edit the following line - required for mem load use)
-// instance=/tb_data_memory/UUT/memory
+// instance=/tb_procesador/UUT/dataMemory/memory
 // format=hex addressradix=h dataradix=h version=1.0 wordsperline=1 noaddress
-00000010
-xxxxxxxx
-xxxxxxxx
-xxxxxxxx
-00000009
+00000005
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+00000008
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx

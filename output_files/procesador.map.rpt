@@ -1,5 +1,5 @@
 Analysis & Elaboration report for procesador
-Sun Nov 15 14:05:14 2020
+Mon Nov 16 13:46:06 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -9,10 +9,21 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "image_memory:UUT"
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  4. Source assignments for PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated
+  5. Parameter Settings for User Entity Instance: PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component
+  6. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu
+  7. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|division:myDiv
+  8. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|bor:myOr
+  9. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|band:myband
+ 10. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|mult:myMulti
+ 11. altsyncram Parameter Settings by Entity Instance
+ 12. Analysis & Elaboration Settings
+ 13. Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu"
+ 14. Port Connectivity Checks: "PROCESADOR:UUT|image_procesada_memory:ipm"
+ 15. Port Connectivity Checks: "PROCESADOR:UUT|image_cruda_memory:icm"
+ 16. Port Connectivity Checks: "PROCESADOR:UUT|_register_file:regFile"
+ 17. Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"
+ 18. Analysis & Elaboration Messages
 
 
 
@@ -39,10 +50,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Nov 15 14:05:14 2020       ;
+; Analysis & Elaboration Status ; Successful - Mon Nov 16 13:46:06 2020       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; procesador                                  ;
-; Top-level Entity Name         ; tb_image_memory                             ;
+; Top-level Entity Name         ; tb_procesador                               ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -70,13 +81,153 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                              ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
++------------------------------------+-----------------------+-------------------------------------------------------------------------+
+; Parameter Name                     ; Value                 ; Type                                                                    ;
++------------------------------------+-----------------------+-------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                                                          ;
+; WIDTH_BYTEENA                      ; 1                     ; Untyped                                                                 ;
+; OPERATION_MODE                     ; ROM                   ; Untyped                                                                 ;
+; WIDTH_A                            ; 32                    ; Signed Integer                                                          ;
+; WIDTHAD_A                          ; 8                     ; Signed Integer                                                          ;
+; NUMWORDS_A                         ; 256                   ; Signed Integer                                                          ;
+; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                                                 ;
+; INDATA_ACLR_A                      ; NONE                  ; Untyped                                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
+; WIDTH_B                            ; 1                     ; Untyped                                                                 ;
+; WIDTHAD_B                          ; 1                     ; Untyped                                                                 ;
+; NUMWORDS_B                         ; 1                     ; Untyped                                                                 ;
+; INDATA_REG_B                       ; CLOCK1                ; Untyped                                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                                                 ;
+; INDATA_ACLR_B                      ; NONE                  ; Untyped                                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                                                          ;
+; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                                                 ;
+; BYTE_SIZE                          ; 8                     ; Untyped                                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                                 ;
+; INIT_FILE                          ; InstructionMemory.mif ; Untyped                                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                                                 ;
+; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                                                 ;
+; ENABLE_ECC                         ; FALSE                 ; Untyped                                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                                                 ;
+; DEVICE_FAMILY                      ; Cyclone V             ; Untyped                                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_omg1       ; Untyped                                                                 ;
++------------------------------------+-----------------------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|division:myDiv ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|bor:myOr ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|band:myband ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|mult:myMulti ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                    ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                   ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                       ;
+; Entity Instance                           ; PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                     ;
+;     -- WIDTH_A                            ; 32                                                                                      ;
+;     -- NUMWORDS_A                         ; 256                                                                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
++-------------------------------------------+-----------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; tb_image_memory    ; procesador         ;
+; Top-level entity name                                                           ; tb_procesador      ; procesador         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -157,13 +308,55 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "image_memory:UUT"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; RD   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------+
+; Port Connectivity Checks: "PROCESADOR:UUT|alu:myAlu" ;
++-------------+-------+----------+---------------------+
+; Port        ; Type  ; Severity ; Details             ;
++-------------+-------+----------+---------------------+
+; imRd[31..8] ; Input ; Info     ; Stuck at GND        ;
++-------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PROCESADOR:UUT|image_procesada_memory:ipm"                                               ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; wA[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; RD        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PROCESADOR:UUT|image_cruda_memory:icm"                                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; WE        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; WD        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; RD[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PROCESADOR:UUT|_register_file:regFile"                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; weIm        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; imWd[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"                                                                                ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                  ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; imWAddress[31..1] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; i1                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; imR               ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -172,7 +365,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 15 13:58:51 2020
+    Info: Processing started: Mon Nov 16 13:38:47 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -223,34 +416,83 @@ Info (12021): Found 1 design units, including 1 entities, in source file procesa
 Info (12021): Found 1 design units, including 1 entities, in source file tb_pc_counter.sv
     Info (12023): Found entity 1: tb_pc_counter File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_pc_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_procesador.sv
-    Info (12023): Found entity 1: tb_procesador File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 4
+    Info (12023): Found entity 1: tb_procesador File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file muxcontrol.sv
     Info (12023): Found entity 1: muxControl File: C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file image_memory.sv
     Info (12023): Found entity 1: image_memory File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_memory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_image_memory.sv
     Info (12023): Found entity 1: tb_image_memory File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at PROCESADOR.sv(26): created implicit net for "Rwe2" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 26
-Info (12127): Elaborating entity "tb_image_memory" for the top level hierarchy
-Warning (10755): Verilog HDL warning at tb_image_memory.sv(8): assignments to clk create a combinational loop File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 8
-Info (10648): Verilog HDL Display System Task info at tb_image_memory.sv(11): Image memory TB... File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 11
-Warning (10855): Verilog HDL warning at tb_image_memory.sv(10): initial value for variable wd should be constant File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 10
-Info (12128): Elaborating entity "image_memory" for hierarchy "image_memory:UUT" File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 6
-Warning (10230): Verilog HDL assignment warning at image_memory.sv(9): truncated value with size 9 to match size of target (8) File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_memory.sv Line: 9
-Warning (10175): Verilog HDL warning at image_memory.sv(19): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_memory.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file image_cruda_memory.sv
+    Info (12023): Found entity 1: image_cruda_memory File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file image_procesada_memory.sv
+    Info (12023): Found entity 1: image_procesada_memory File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 1
+Info (12127): Elaborating entity "tb_procesador" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb_procesador.sv(12): assignments to clk create a combinational loop File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 12
+Info (10648): Verilog HDL Display System Task info at tb_procesador.sv(15): Processing image... File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 15
+Info (10648): Verilog HDL Display System Task info at tb_procesador.sv(16): Please wait. File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 16
+Info (12128): Elaborating entity "PROCESADOR" for hierarchy "PROCESADOR:UUT" File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at PROCESADOR.sv(29): object "imRd2" assigned a value but never read File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 29
+Info (12128): Elaborating entity "_pc_counter" for hierarchy "PROCESADOR:UUT|_pc_counter:pcCounter" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 33
+Info (12128): Elaborating entity "_pc_counter_4" for hierarchy "PROCESADOR:UUT|_pc_counter_4:pcCouterMas4" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 34
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 35
+Info (12128): Elaborating entity "instr_mem" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv Line: 6
+Info (12128): Elaborating entity "altsyncram" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+Info (12130): Elaborated megafunction instantiation "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+Info (12133): Instantiated megafunction "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "InstructionMemory.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_omg1.tdf
+    Info (12023): Found entity 1: altsyncram_omg1 File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_omg1" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "_control_unit" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at _control_unit.sv(126): truncated value with size 32 to match size of target (1) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at _control_unit.sv(136): truncated value with size 32 to match size of target (1) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 136
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe2", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_imWe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_dmWe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_imrd", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_imrd" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_dmWe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_imWe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_Rwe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (10041): Inferred latch for "aux_Rwe2" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
+Info (12128): Elaborating entity "muxControl" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 32
+Info (12128): Elaborating entity "_register_file" for hierarchy "PROCESADOR:UUT|_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 37
+Info (12128): Elaborating entity "muxRI" for hierarchy "PROCESADOR:UUT|_register_file:regFile|muxRI:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 15
+Info (12128): Elaborating entity "data_memory" for hierarchy "PROCESADOR:UUT|data_memory:dataMemory" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 38
+Warning (10850): Verilog HDL warning at data_memory.sv(12): number of words (0) in memory file does not match the number of elements in the address range [0:1999] File: C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv Line: 12
+Warning (10175): Verilog HDL warning at data_memory.sv(19): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv Line: 19
+Info (12128): Elaborating entity "image_cruda_memory" for hierarchy "PROCESADOR:UUT|image_cruda_memory:icm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 39
+Warning (10175): Verilog HDL warning at image_cruda_memory.sv(19): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv Line: 19
+Info (12128): Elaborating entity "image_procesada_memory" for hierarchy "PROCESADOR:UUT|image_procesada_memory:ipm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 40
+Warning (10850): Verilog HDL warning at image_procesada_memory.sv(12): number of words (0) in memory file does not match the number of elements in the address range [0:152099] File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 12
+Warning (10175): Verilog HDL warning at image_procesada_memory.sv(19): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 19
+Info (12128): Elaborating entity "alu" for hierarchy "PROCESADOR:UUT|alu:myAlu" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 41
+Info (12128): Elaborating entity "division" for hierarchy "PROCESADOR:UUT|alu:myAlu|division:myDiv" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 19
+Info (12128): Elaborating entity "bor" for hierarchy "PROCESADOR:UUT|alu:myAlu|bor:myOr" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 20
+Info (12128): Elaborating entity "band" for hierarchy "PROCESADOR:UUT|alu:myAlu|band:myband" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 21
+Info (12128): Elaborating entity "mult" for hierarchy "PROCESADOR:UUT|alu:myAlu|mult:myMulti" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 22
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_image_memory.sv Line: 2
-Info (144001): Generated suppressed messages file C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5002 megabytes
-    Info: Processing ended: Sun Nov 15 14:05:14 2020
-    Info: Elapsed time: 00:06:23
-    Info: Total CPU time (on all processors): 00:06:33
-
-
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg.
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 7
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4999 megabytes
+    Info: Processing ended: Mon Nov 16 13:46:06 2020
+    Info: Elapsed time: 00:07:19
+    Info: Total CPU time (on all processors): 00:07:34
 
 
