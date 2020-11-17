@@ -34,14 +34,26 @@ module PROCESADOR(
 	logic[31:0] dmRd = 0; //dato leido de la memoria de datos
 	logic	imRe = 0; //bandera para aumentar la posicion en la memoria de imagen
 	logic cero = 0;
-	
 	logic imWdB = 0;
 	
+	logic s = 0;
+
+	logic slt = 0;
+	logic sle = 0;
+	logic sgt = 0;
+	logic sge = 0;
+	logic slt2 = 0;
+	logic slt3 = 0;
+	logic slt4 = 0;
+	logic slt5 = 0;
+	logic slt6 = 0;
+	logic slt7 = 0;
+	logic slt8 = 0;
+	
 //--------- LLAMADAS
-_pc_counter 				pcCounter(clk,rst,pc4,pc);
+_pc_counter 				pcCounter(clk,rst,s,se,slt,sle,sgt,sge,slt2,slt3,slt4,slt5,slt6,slt7,slt8,pc4,pc);
 _pc_counter_4 				pcCouterMas4(pc, pc4);
 instruction_memory 		instMem(clk,pc,instruccion);
-
 
 _control_unit				contUnit(instruccion, aluControl,r1,r2,rDestino,i1,i2,imWe, dmWe, Rwe,Rwe2,imRe,imWdB);
 _register_file				regFile(clk,rst,imWdB,imWe,Rwe,Rwe2,r1,r2,rDestino,aluResult,i2,imRd,dmRd,A,B,dmWd,dmAddress,imWd);
@@ -54,7 +66,7 @@ image_procesada_memory	ipm(clk,imWdB,imWAddress4,imWAddress4,imWd,imWAddress,imR
 imRAddress4					imWA(clk,imWAddress,imWdB, imWAddress4);
 
 
-alu							myAlu(A,B,aluControl,aluResult);		
+alu							myAlu(A,B,aluControl,aluResult,s,se,slt,sle,sgt,sge,slt2,slt3,slt4,slt5,slt6,slt7,slt8);		
 
 
 endmodule

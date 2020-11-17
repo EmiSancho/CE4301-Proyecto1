@@ -147,6 +147,136 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_imWd = 0;
 							end
 							
+			 //---------------SALTOS--------------
+			6'b001100 : begin  //S
+									aux_alu_control = 6'b001100;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+						
+			6'b001101 : begin  //SEQ
+									aux_alu_control = 6'b001101;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+							
+			6'b001110 : begin //SLT 
+									aux_alu_control = 6'b001110;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+							
+			6'b001111 : begin //SLE
+									aux_alu_control = 6'b0001111;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end	
+			
+			6'b010000 : begin //SGT
+									aux_alu_control = 6'b010000;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+							
+			6'b010001 : begin //SGE
+									aux_alu_control = 6'b010001;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+			
+			6'b010010 : begin //SLE2
+									aux_alu_control = 6'b010010;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+			
+			6'b010011 : begin //SLE3
+									aux_alu_control = 6'b010011;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+			
+			6'b010100 : begin //SLE4
+									aux_alu_control = 6'b010100;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+							
+			6'b010101 : begin //SLE5
+									aux_alu_control = 6'b010101;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end				
+			
+			6'b010110 : begin //SLE6
+									aux_alu_control = 6'b010110;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+			
+			6'b010111 : begin //SLE7
+									aux_alu_control = 6'b010111;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end
+			6'b011000 : begin //SLE8
+									aux_alu_control = 6'b011000;
+									aux_Rwe2 = 0;
+									aux_Rwe = 0;
+									aux_imWe = 0;
+									aux_dmWe = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+							end				
+			
 			default: aux_alu_control = 6'b000000;				
 			
 		endcase

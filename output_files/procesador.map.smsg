@@ -1,1 +1,2 @@
+Warning (10268): Verilog HDL information at alu.sv(40): always construct contains both blocking and non-blocking assignments File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
 Warning (10268): Verilog HDL information at image_procesada_memory.sv(18): always construct contains both blocking and non-blocking assignments File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 18

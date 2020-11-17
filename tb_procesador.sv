@@ -23,7 +23,7 @@ module tb_procesador();
 
 
 endmodule
-
+//
 //add wave -position 1  sim:/tb_procesador/UUT/instruccion
 //add wave -position end  sim:/tb_procesador/UUT/clk
 //add wave -position end  sim:/tb_procesador/UUT/aluControl
