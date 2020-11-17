@@ -1,17 +1,17 @@
 module _control_unit(input logic [31:0]instruccion,
-							input logic [31:0] imWAddress, imRAddress,
+							//input logic [31:0]imRAddress, // imWAddress, 
 							output logic [5:0]AluControl,
 							output logic [2:0]R1,
 							output logic [2:0]R2,
 							output logic [2:0]RDestino,
 							output logic [7:0]i1,//inmediatos
 							output logic [7:0]i2, //inmediatos
-							output logic imWe, //image memory write enable
+							output logic imWe, //image memory data write enable
 							output logic dmWe, //data memory write enable
 							output logic Rwe, //Register write enable
 							output logic Rwe2, //i2 write enable in register SOLO PARA MOV
-							output logic imRd,
-							output logic[31:0] imW,imR
+							output logic imRa, // para aumentar el valor de la direccion de la IM
+							output logic imWd //IMAGE memory write dato
 							);
 							
 	logic[5:0] aux_operacion = 0;
@@ -26,9 +26,9 @@ module _control_unit(input logic [31:0]instruccion,
 	logic aux_dmWe = 0;
 	logic aux_Rwe = 0;
 	logic aux_Rwe2 = 0;
-	logic aux_imWAddress = 0;
-	logic aux_imRAddress = 0;
-	logic aux_imrd = 0;
+	logic	aux_imRa = 0;
+	logic	aux_imWd = 0;
+	
 	muxControl mc(instruccion, aux_operacion, aux_r1,aux_r2,aux_destino,aux_i1,aux_i2);
 	
 	
@@ -40,7 +40,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 									
 							end
 						
@@ -51,7 +52,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b000011 : begin //MOV 
@@ -60,7 +62,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 0;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b000100 : begin //DIV 
@@ -69,7 +72,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end	
 			
 			6'b000101 : begin //MUL
@@ -78,7 +82,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b000110 : begin //AND 
@@ -87,7 +92,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b000111 : begin //OR 
@@ -96,7 +102,8 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b001000 : begin //STR en la memoria de datos
@@ -105,40 +112,41 @@ module _control_unit(input logic [31:0]instruccion,
 									aux_Rwe = 0;
 									aux_imWe = 0;
 									aux_dmWe = 1;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
 							end
 							
 			6'b001001 : begin //LDR desde la memoria de datos
-									aux_alu_control = 6'b001001;
+									aux_alu_control = 6'b0;
 									aux_Rwe2 = 0;
-									aux_Rwe =0;
+									aux_Rwe = 1;
 									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 0;
+									
 							end
 							
 			6'b001010 : begin //STR en la imagen procesada
 									aux_alu_control = 6'b0;
 									aux_Rwe2 = 0;
 									aux_Rwe = 0;
-									aux_imWe = 1;
+									aux_imWe = 0;
 									aux_dmWe = 0;
-									aux_imWAddress = aux_imWAddress + 4;
-									aux_imrd = 0;
+									aux_imRa = 0;
+									aux_imWd = 1;
 							end
 							
 			6'b001011 : begin //LDR desde la imagen cruda
-									aux_alu_control = 6'b001011;
+									aux_alu_control = 6'b0;
 									aux_Rwe2 = 0;
-									aux_Rwe = 1;
-									aux_imWe = 0;
+									aux_Rwe = 0;
+									aux_imWe = 1;
 									aux_dmWe = 0;
-									aux_imRAddress = aux_imRAddress + 4;
-									if(aux_imRAddress>152100)begin 
-										aux_imRAddress = 0;
-									end
-									aux_imrd = 1;
+									aux_imRa = 1;
+									aux_imWd = 0;
 							end
+							
 			default: aux_alu_control = 6'b000000;				
 			
 		endcase
@@ -155,7 +163,7 @@ module _control_unit(input logic [31:0]instruccion,
 	assign dmWe = aux_dmWe;
 	assign Rwe = aux_Rwe;
 	assign Rwe2 = aux_Rwe2;
-	assign imW = aux_imWAddress;
-	assign imR = aux_imRAddress;
-	assign imRd = aux_imrd;
+   assign imRa = 	aux_imRa;
+	assign imWd = aux_imWd;
+
 endmodule 

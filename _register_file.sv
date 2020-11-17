@@ -1,14 +1,16 @@
 //WE: Write enable
 //WD: Write data
 
-module _register_file(input clk, rst, WE3,Rwe2, weIm,
-								input [2:0] A1, A2, A3,
-								input [31:0] WD3,
-								input[7:0] i2,
-								input[7:0] imRd,
+module _register_file(input clk, rst,imWdB, imWe, WE3,Rwe2,
+								input logic[2:0] A1, A2, A3,
+								input logic[31:0] WD3,
+								input logic[7:0] i2,
+								input logic[7:0] imRd,
+								input logic[31:0] dmRd,
 								output logic [31:0] RD1, RD2,
 								output logic[31:0] dmWd, dmWaddress,
-							   output logic[31:0] imWd);
+								output logic[31:0] imWd
+							   );
 								
 	logic [31:0] register_file [7:0];
 	logic[31:0] aux_rd2;
@@ -28,11 +30,27 @@ module _register_file(input clk, rst, WE3,Rwe2, weIm,
 	
 			
 		end else begin
-
-			if (WE3) register_file[A3] <= WD3;
-			if (weIm) register_file[A3] <= imRd;
-			if (Rwe2) register_file[A3] <= i2;
+			if(imWdB) imWd <= register_file[A1];
+			
+			if(WE3)begin
+				if(WD3 == 0)begin
+					register_file[A3] <= dmRd;
+				end
+				
 			end
+			
+			if (WE3) begin
+				if(WD3 != 0)begin
+					register_file[A3] <= WD3;
+				end
+			end
+			
+			if (Rwe2) register_file[A3] <= i2;
+			
+			if(imWe) register_file[A3] <=  imRd ;
+			
+			end			
+			
 		end
 		
 	always_comb begin
@@ -41,7 +59,7 @@ module _register_file(input clk, rst, WE3,Rwe2, weIm,
 			
 			dmWaddress = register_file[A2];
 			dmWd = register_file[A1];
-			imWd = register_file[A1];
+			
 			
 			
 			if(A2 != 3'b0)begin 

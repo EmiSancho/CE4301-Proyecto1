@@ -24,7 +24,8 @@ module tb_procesador();
 
 endmodule
 
-//add wave -position end  sim:/tb_procesador/UUT/instruccion
+//add wave -position 1  sim:/tb_procesador/UUT/instruccion
+//add wave -position end  sim:/tb_procesador/UUT/clk
 //add wave -position end  sim:/tb_procesador/UUT/aluControl
 //add wave -position end  sim:/tb_procesador/UUT/r1
 //add wave -position end  sim:/tb_procesador/UUT/r2
@@ -40,4 +41,39 @@ endmodule
 //add wave -position end  sim:/tb_procesador/UUT/imWd
 //add wave -position end  sim:/tb_procesador/UUT/imRd
 //add wave -position end  sim:/tb_procesador/UUT/imRd2
+//add wave -position 17  sim:/tb_procesador/UUT/regFile/WE3
+//add wave -position 18  sim:/tb_procesador/UUT/regFile/WD3
+//add wave -position end  sim:/tb_procesador/UUT/regFile/register_file
+
+
+//add wave -position end  sim:/tb_procesador/UUT/aluControl
+//add wave -position end  sim:/tb_procesador/UUT/r1
+//add wave -position end  sim:/tb_procesador/UUT/r2
+//add wave -position end  sim:/tb_procesador/UUT/rDestino
+//add wave -position end  sim:/tb_procesador/UUT/i1
+//add wave -position end  sim:/tb_procesador/UUT/i2
+//add wave -position end  sim:/tb_procesador/UUT/A
+//add wave -position end  sim:/tb_procesador/UUT/B
+//add wave -position end  sim:/tb_procesador/UUT/aluResult
+//add wave -position end  sim:/tb_procesador/UUT/dmWe
+//add wave -position end  sim:/tb_procesador/UUT/regFile/register_file
+//add wave -position end  sim:/tb_procesador/UUT/dmRd
+
+//add wave -position end  sim:/tb_procesador/UUT/instruccion
+//add wave -position end  sim:/tb_procesador/UUT/r1
+//add wave -position end  sim:/tb_procesador/UUT/r2
+//add wave -position end  sim:/tb_procesador/UUT/rDestino
+//add wave -position end  sim:/tb_procesador/UUT/i1
+//add wave -position end  sim:/tb_procesador/UUT/i2
+//add wave -position end  sim:/tb_procesador/UUT/A
+//add wave -position end  sim:/tb_procesador/UUT/B
+//add wave -position end  sim:/tb_procesador/UUT/aluResult
+//add wave -position end  sim:/tb_procesador/UUT/imWe
+//add wave -position end  sim:/tb_procesador/UUT/imRAddress
+//add wave -position end  sim:/tb_procesador/UUT/imRAddress4
+//add wave -position end  sim:/tb_procesador/UUT/imWAddress
+//add wave -position end  sim:/tb_procesador/UUT/imWd
+//add wave -position end  sim:/tb_procesador/UUT/imRd
+//add wave -position end  sim:/tb_procesador/UUT/imRd2
+//add wave -position end  sim:/tb_procesador/UUT/imRe
 //add wave -position end  sim:/tb_procesador/UUT/regFile/register_file

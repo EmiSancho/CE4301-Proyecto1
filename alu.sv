@@ -5,8 +5,6 @@
 module alu #(parameter n=32)(
 	input logic[n-1:0] A,B,
 	input logic[5:0] control,
-	input logic[31:0] dmRd,
-	input logic[31:0] imRd,
 	output[n-1:0] salida
 );
  
@@ -29,8 +27,6 @@ module alu #(parameter n=32)(
 		6'b000101: begin AUXresult <= r_mult; end // multiplicacion
 		6'b000110: begin AUXresult <= r_and; end // AND
 		6'b000111: begin AUXresult <= r_or; end // OR
-		6'b001001: begin AUXresult <= 31'b0 + dmRd; end // LDR desde la memoria de datos
-		6'b001011: begin AUXresult <= 31'b0 + imRd; end // LDR desde la imagen cruda
 		default: AUXresult <= 0;
 		endcase
 	end

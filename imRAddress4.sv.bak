@@ -1,0 +1,13 @@
+
+module imRAddress4(
+		input[31:0] imRAactual,
+		input imRe, //image memory read enable
+		output[31:0] imRAnext
+	);
+	
+	if(imRe)begin
+		imRanext = imRAactual + 1;
+	end	
+			
+	
+endmodule
