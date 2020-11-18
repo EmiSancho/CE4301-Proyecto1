@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/emily/Desktop/CE4301-Proyecto1/simulation/modelsim
 v_control_unit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1605633707
+Z2 !s110 1605636844
 !i10b 1
 !s100 bhBFinfVGcSBhCHK;Iz9g0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1605633707.000000
+Z6 !s108 1605636843.000000
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv|
 !i113 1
@@ -38,15 +38,15 @@ Z9 tCvgOpt 0
 n@_control_unit
 v_pc_counter
 R1
-R2
+Z10 !s110 1605636843
 !i10b 1
-!s100 ?heXF?k_4WQPKnW9GN6ZU1
+!s100 78c2<BfjI;1aLje[i;_:51
 R3
-IOj9`9`?WP?Sc91[HNFz_^0
+Il2dD9;]TPIVceIM><I7<;3
 R4
 S1
 R0
-Z10 w1605633514
+w1605635396
 8C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv
 !i122 8
@@ -65,15 +65,15 @@ R9
 n@_pc_counter
 v_pc_counter_4
 R1
-R2
+R10
 !i10b 1
-!s100 Eo_9cNLF@R0GI3=^@E[V52
+!s100 aD77HW>3h9JfEMM7:zhzk3
 R3
-IIHh5gza8ZhX>zF`HXg<772
+I:=6NJU3[;Ja=K]XBD;ab33
 R4
 S1
 R0
-w1605633673
+w1605634561
 8C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv
 !i122 7
@@ -92,7 +92,7 @@ R9
 n@_pc_counter_4
 v_register_file
 R1
-R2
+R10
 !i10b 1
 !s100 Q>UZ9n<19Q91F;_ZZ6W[13
 R3
@@ -119,7 +119,7 @@ R9
 n@_register_file
 valu
 R1
-Z12 !s110 1605633708
+R2
 !i10b 1
 !s100 U7>G_kM[9c2]e=H11MV:61
 R3
@@ -136,7 +136,7 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1605633708.000000
+Z12 !s108 1605636844.000000
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv|
 !i113 1
@@ -145,7 +145,7 @@ R8
 R9
 vband
 R1
-Z14 !s110 1605633706
+R10
 !i10b 1
 !s100 fWOiP7U??H[GD_0LC5PNG1
 R3
@@ -157,12 +157,12 @@ w1605406268
 8C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/band.sv
 !i122 4
-Z15 L0 1 9
+Z13 L0 1 9
 R5
 r1
 !s85 0
 31
-Z16 !s108 1605633706.000000
+R6
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv|
 !i113 1
@@ -171,7 +171,7 @@ R8
 R9
 vbor
 R1
-R14
+Z14 !s110 1605636842
 !i10b 1
 !s100 63j>iL2T8n6?IU>kTh?VB1
 R3
@@ -188,7 +188,7 @@ R5
 r1
 !s85 0
 31
-R16
+Z15 !s108 1605636842.000000
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv|
 !i113 1
@@ -197,7 +197,7 @@ R8
 R9
 vdata_memory
 R1
-Z17 !s110 1605633709
+Z16 !s110 1605636845
 !i10b 1
 !s100 <12<4h3HfBnWVEl92]ljY2
 R3
@@ -214,7 +214,7 @@ R5
 r1
 !s85 0
 31
-Z18 !s108 1605633709.000000
+Z17 !s108 1605636845.000000
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv|
 !i113 1
@@ -235,12 +235,12 @@ w1605402483
 8C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/division.sv
 !i122 2
-R15
+R13
 R5
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv|
 !i113 1
@@ -249,7 +249,7 @@ R8
 R9
 vimage_cruda_memory
 R1
-R17
+R16
 !i10b 1
 !s100 WXJ?hHRf?`o55Sj_TJHLb0
 R3
@@ -266,7 +266,7 @@ R5
 r1
 !s85 0
 31
-R18
+R17
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv|
 !i113 1
@@ -275,7 +275,7 @@ R8
 R9
 vimage_procesada_memory
 R1
-R12
+R16
 !i10b 1
 !s100 ;6hB`m?]NMkN^OHcIZHl30
 R3
@@ -292,7 +292,7 @@ R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv|
 !i113 1
@@ -301,7 +301,7 @@ R8
 R9
 vimRAddress4
 R1
-R17
+R16
 !i10b 1
 !s100 =7RbjAF3gZ@;?4lPO?ElJ3
 R3
@@ -318,7 +318,7 @@ R5
 r1
 !s85 0
 31
-R13
+R17
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv|
 !i113 1
@@ -327,7 +327,7 @@ R8
 R9
 nim@r@address4
 vinstr_mem
-!s110 1605633705
+R14
 !i10b 1
 !s100 :Sj9Jz@LEk:cZeRih_41Z1
 R3
@@ -343,7 +343,7 @@ R5
 r1
 !s85 0
 31
-!s108 1605633705.000000
+R15
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v|
 !i113 1
@@ -352,7 +352,7 @@ o-vlog01compat -work work
 R9
 vinstruction_memory
 R1
-R12
+R2
 !i10b 1
 !s100 4==<RZGBn8dCGi8F1B<G;1
 R3
@@ -360,7 +360,7 @@ IiS:?`E_j5WV<A:i[X5aUZ2
 R4
 S1
 R0
-Z19 w1605391327
+Z18 w1605391327
 8C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv
 !i122 10
@@ -369,7 +369,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv|
 !i113 1
@@ -390,12 +390,12 @@ w1605402484
 8C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv
 !i122 1
-R15
+R13
 R5
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv|
 !i113 1
@@ -404,7 +404,7 @@ R8
 R9
 vmuxControl
 R1
-R12
+R2
 !i10b 1
 !s100 ^jH[SceRgUzb0aRXM`ncT3
 R3
@@ -412,7 +412,7 @@ I2Je13Eb@PYHn>4z?F[m?^2
 R4
 S1
 R0
-R19
+R18
 8C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv
 !i122 14
@@ -421,7 +421,7 @@ R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv|
 !i113 1
@@ -431,7 +431,7 @@ R9
 nmux@control
 vmuxRI
 R1
-R2
+R10
 !i10b 1
 !s100 EVGXd9SJL25VBJ?h:PdA12
 R3
@@ -448,7 +448,7 @@ R5
 r1
 !s85 0
 31
-R16
+R6
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv|
 !i113 1
@@ -458,7 +458,7 @@ R9
 nmux@r@i
 vPROCESADOR
 R1
-R12
+R2
 !i10b 1
 !s100 1ELkN?6g7>zV5@=2eUc993
 R3
@@ -475,7 +475,7 @@ R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv|
 !i113 1
@@ -485,7 +485,7 @@ R9
 n@p@r@o@c@e@s@a@d@o@r
 vtb_procesador
 R1
-R12
+R2
 !i10b 1
 !s100 l>_@M=NT`@KN>DzZ3W`aT0
 R3
@@ -493,7 +493,7 @@ IP<CTViTRIJ@ZVV2;o?3AJ1
 R4
 S1
 R0
-R10
+w1605636327
 8C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv
 FC:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv
 !i122 13
@@ -502,7 +502,7 @@ R5
 r1
 !s85 0
 31
-R13
+R12
 !s107 C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/emily/Desktop/CE4301-Proyecto1|C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv|
 !i113 1

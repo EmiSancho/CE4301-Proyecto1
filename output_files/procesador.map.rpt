@@ -1,5 +1,5 @@
-Analysis & Elaboration report for procesador
-Tue Nov 17 11:21:29 2020
+Analysis & Synthesis report for procesador
+Tue Nov 17 12:19:51 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,23 +7,31 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Source assignments for PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated
-  5. Parameter Settings for User Entity Instance: PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component
-  6. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu
-  7. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|division:myDiv
-  8. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|bor:myOr
-  9. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|band:myband
- 10. Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|mult:myMulti
- 11. altsyncram Parameter Settings by Entity Instance
- 12. Analysis & Elaboration Settings
- 13. Port Connectivity Checks: "PROCESADOR:UUT|image_procesada_memory:ipm"
- 14. Port Connectivity Checks: "PROCESADOR:UUT|image_cruda_memory:icm"
- 15. Port Connectivity Checks: "PROCESADOR:UUT|_register_file:regFile"
- 16. Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"
- 17. Analysis & Elaboration Messages
- 18. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Source assignments for instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated
+ 12. Parameter Settings for User Entity Instance: instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component
+ 13. Parameter Settings for User Entity Instance: alu:myAlu
+ 14. Parameter Settings for User Entity Instance: alu:myAlu|division:myDiv
+ 15. Parameter Settings for User Entity Instance: alu:myAlu|bor:myOr
+ 16. Parameter Settings for User Entity Instance: alu:myAlu|band:myband
+ 17. Parameter Settings for User Entity Instance: alu:myAlu|mult:myMulti
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "image_procesada_memory:ipm"
+ 20. Port Connectivity Checks: "image_cruda_memory:icm"
+ 21. Port Connectivity Checks: "_register_file:regFile"
+ 22. Port Connectivity Checks: "_control_unit:contUnit"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,187 +55,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Nov 17 11:21:28 2020       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; procesador                                  ;
-; Top-level Entity Name         ; tb_procesador                               ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                              ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                               ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
-+------------------------------------+-----------------------+-------------------------------------------------------------------------+
-; Parameter Name                     ; Value                 ; Type                                                                    ;
-+------------------------------------+-----------------------+-------------------------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                                                 ;
-; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                                              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                                            ;
-; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                                            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                                                          ;
-; WIDTH_BYTEENA                      ; 1                     ; Untyped                                                                 ;
-; OPERATION_MODE                     ; ROM                   ; Untyped                                                                 ;
-; WIDTH_A                            ; 32                    ; Signed Integer                                                          ;
-; WIDTHAD_A                          ; 8                     ; Signed Integer                                                          ;
-; NUMWORDS_A                         ; 256                   ; Signed Integer                                                          ;
-; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                                                 ;
-; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
-; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
-; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                                                 ;
-; INDATA_ACLR_A                      ; NONE                  ; Untyped                                                                 ;
-; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                                                 ;
-; WIDTH_B                            ; 1                     ; Untyped                                                                 ;
-; WIDTHAD_B                          ; 1                     ; Untyped                                                                 ;
-; NUMWORDS_B                         ; 1                     ; Untyped                                                                 ;
-; INDATA_REG_B                       ; CLOCK1                ; Untyped                                                                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                                                 ;
-; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                                                 ;
-; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                                                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                                                 ;
-; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                                                 ;
-; INDATA_ACLR_B                      ; NONE                  ; Untyped                                                                 ;
-; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                                 ;
-; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
-; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
-; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                                 ;
-; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                                                 ;
-; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                                                          ;
-; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                                                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                                                 ;
-; BYTE_SIZE                          ; 8                     ; Untyped                                                                 ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                                                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                                 ;
-; INIT_FILE                          ; InstructionMemory.mif ; Untyped                                                                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                                                 ;
-; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                                                 ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                                                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                                                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                                                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                                                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                                                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                                                 ;
-; ENABLE_ECC                         ; FALSE                 ; Untyped                                                                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                                                 ;
-; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                                                 ;
-; DEVICE_FAMILY                      ; Cyclone V             ; Untyped                                                                 ;
-; CBXI_PARAMETER                     ; altsyncram_omg1       ; Untyped                                                                 ;
-+------------------------------------+-----------------------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; n              ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|division:myDiv ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|bor:myOr ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|band:myband ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PROCESADOR:UUT|alu:myAlu|mult:myMulti ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                                    ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------+
-; Name                                      ; Value                                                                                   ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                                       ;
-; Entity Instance                           ; PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                                     ;
-;     -- WIDTH_A                            ; 32                                                                                      ;
-;     -- NUMWORDS_A                         ; 256                                                                                     ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                  ;
-;     -- WIDTH_B                            ; 1                                                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Nov 17 12:19:51 2020       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; procesador                                  ;
+; Top-level Entity Name           ; PROCESADOR                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 2                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; tb_procesador      ; procesador         ;
+; Top-level entity name                                                           ; PROCESADOR         ; procesador         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -308,8 +165,531 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; imagenCruda.img                  ; yes             ; User Unspecified File            ; C:/Users/emily/Desktop/CE4301-Proyecto1/imagenCruda.img                      ;         ;
+; mult.sv                          ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/mult.sv                              ;         ;
+; division.sv                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/division.sv                          ;         ;
+; bor.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/bor.sv                               ;         ;
+; band.sv                          ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/band.sv                              ;         ;
+; muxRI.sv                         ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/muxRI.sv                             ;         ;
+; _register_file.sv                ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv                    ;         ;
+; _pc_counter_4.sv                 ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter_4.sv                     ;         ;
+; _pc_counter.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/_pc_counter.sv                       ;         ;
+; _control_unit.sv                 ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv                     ;         ;
+; data_memory.img                  ; yes             ; User Unspecified File            ; C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.img                      ;         ;
+; InstructionMemory.mif            ; yes             ; User Memory Initialization File  ; C:/Users/emily/Desktop/CE4301-Proyecto1/InstructionMemory.mif                ;         ;
+; instr_mem.v                      ; yes             ; User Wizard-Generated File       ; C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v                          ;         ;
+; instruction_memory.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv                ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv                               ;         ;
+; data_memory.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv                       ;         ;
+; PROCESADOR.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv                        ;         ;
+; muxControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/muxControl.sv                        ;         ;
+; image_cruda_memory.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv                ;         ;
+; image_procesada_memory.sv        ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv            ;         ;
+; imRAddress4.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv                       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_omg1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf               ;         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |PROCESADOR                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |PROCESADOR         ; PROCESADOR  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------+
+; Registers Removed During Synthesis                               ;
++---------------------------------------------+--------------------+
+; Register name                               ; Reason for Removal ;
++---------------------------------------------+--------------------+
+; image_cruda_memory:icm|imRAddress[0..31]    ; Lost fanout        ;
+; _register_file:regFile|register_file[7][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[7][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[7][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[6][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[6][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[5][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[5][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[4][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[4][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[3][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[3][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[2][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[2][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[1][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[1][0]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][31] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][30] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][29] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][28] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][27] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][26] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][25] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][24] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][23] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][22] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][21] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][20] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][19] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][18] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][17] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][16] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][15] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][14] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][13] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][12] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][11] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][10] ; Lost fanout        ;
+; _register_file:regFile|register_file[0][9]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][8]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][7]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][6]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][5]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][4]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][3]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][2]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][1]  ; Lost fanout        ;
+; _register_file:regFile|register_file[0][0]  ; Lost fanout        ;
+; _pc_counter:pcCounter|actual[0..7]          ; Lost fanout        ;
+; Total Number of Removed Registers = 296     ;                    ;
++---------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                        ;
++--------------------------------------------+--------------------+------------------------------------------------------------------+
+; Register name                              ; Reason for Removal ; Registers Removed due to This Register                           ;
++--------------------------------------------+--------------------+------------------------------------------------------------------+
+; _register_file:regFile|register_file[7][7] ; Lost Fanouts       ; _pc_counter:pcCounter|actual[1], _pc_counter:pcCounter|actual[0] ;
++--------------------------------------------+--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
++------------------------------------+-----------------------+----------------------------------------------------------+
+; Parameter Name                     ; Value                 ; Type                                                     ;
++------------------------------------+-----------------------+----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                                           ;
+; WIDTH_BYTEENA                      ; 1                     ; Untyped                                                  ;
+; OPERATION_MODE                     ; ROM                   ; Untyped                                                  ;
+; WIDTH_A                            ; 32                    ; Signed Integer                                           ;
+; WIDTHAD_A                          ; 8                     ; Signed Integer                                           ;
+; NUMWORDS_A                         ; 256                   ; Signed Integer                                           ;
+; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                                  ;
+; INDATA_ACLR_A                      ; NONE                  ; Untyped                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                                  ;
+; WIDTH_B                            ; 1                     ; Untyped                                                  ;
+; WIDTHAD_B                          ; 1                     ; Untyped                                                  ;
+; NUMWORDS_B                         ; 1                     ; Untyped                                                  ;
+; INDATA_REG_B                       ; CLOCK1                ; Untyped                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                                  ;
+; INDATA_ACLR_B                      ; NONE                  ; Untyped                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                                           ;
+; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                  ; Untyped                                                  ;
+; BYTE_SIZE                          ; 8                     ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                                  ;
+; INIT_FILE                          ; InstructionMemory.mif ; Untyped                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                                  ;
+; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                                  ;
+; ENABLE_ECC                         ; FALSE                 ; Untyped                                                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                                  ;
+; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                                  ;
+; DEVICE_FAMILY                      ; Cyclone V             ; Untyped                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_omg1       ; Untyped                                                  ;
++------------------------------------+-----------------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:myAlu ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; n              ; 32    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:myAlu|division:myDiv ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:myAlu|bor:myOr ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:myAlu|band:myband ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:myAlu|mult:myMulti ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                     ;
++-------------------------------------------+--------------------------------------------------------------------------+
+; Name                                      ; Value                                                                    ;
++-------------------------------------------+--------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                        ;
+; Entity Instance                           ; instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                      ;
+;     -- WIDTH_A                            ; 32                                                                       ;
+;     -- NUMWORDS_A                         ; 256                                                                      ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                   ;
+;     -- WIDTH_B                            ; 1                                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
++-------------------------------------------+--------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|image_procesada_memory:ipm"                                          ;
+; Port Connectivity Checks: "image_procesada_memory:ipm"                                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -318,7 +698,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|image_cruda_memory:icm"                                                   ;
+; Port Connectivity Checks: "image_cruda_memory:icm"                                                                  ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -329,7 +709,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|_register_file:regFile"                                                     ;
+; Port Connectivity Checks: "_register_file:regFile"                                                                    ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -338,7 +718,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR:UUT|_control_unit:contUnit"                                              ;
+; Port Connectivity Checks: "_control_unit:contUnit"                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -346,14 +726,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 17 11:21:16 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador --analysis_and_elaboration
+    Info: Processing started: Tue Nov 17 12:19:38 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesador -c procesador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mult.sv
@@ -417,19 +818,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file image_p
 Info (12021): Found 1 design units, including 1 entities, in source file imraddress4.sv
     Info (12023): Found entity 1: imRAddress4 File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at PROCESADOR.sv(54): created implicit net for "se" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 54
-Info (12127): Elaborating entity "tb_procesador" for the top level hierarchy
-Warning (10755): Verilog HDL warning at tb_procesador.sv(12): assignments to clk create a combinational loop File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 12
-Info (10648): Verilog HDL Display System Task info at tb_procesador.sv(15): Processing image... File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 15
-Info (10648): Verilog HDL Display System Task info at tb_procesador.sv(16): Please wait. File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 16
-Info (12128): Elaborating entity "PROCESADOR" for hierarchy "PROCESADOR:UUT" File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 9
+Info (12127): Elaborating entity "PROCESADOR" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at PROCESADOR.sv(33): object "imRd2" assigned a value but never read File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 33
-Info (12128): Elaborating entity "_pc_counter" for hierarchy "PROCESADOR:UUT|_pc_counter:pcCounter" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 54
-Info (12128): Elaborating entity "_pc_counter_4" for hierarchy "PROCESADOR:UUT|_pc_counter_4:pcCouterMas4" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 55
-Info (12128): Elaborating entity "instruction_memory" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 56
-Info (12128): Elaborating entity "instr_mem" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv Line: 6
-Info (12128): Elaborating entity "altsyncram" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
-Info (12130): Elaborated megafunction instantiation "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
-Info (12133): Instantiated megafunction "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+Info (12128): Elaborating entity "_pc_counter" for hierarchy "_pc_counter:pcCounter" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 54
+Info (12128): Elaborating entity "_pc_counter_4" for hierarchy "_pc_counter_4:pcCouterMas4" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 55
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:instMem" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 56
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instruction_memory:instMem|instr_mem:ROM" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instruction_memory.sv Line: 6
+Info (12128): Elaborating entity "altsyncram" for hierarchy "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+Info (12130): Elaborated megafunction instantiation "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
+Info (12133): Instantiated megafunction "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/emily/Desktop/CE4301-Proyecto1/instr_mem.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -446,8 +843,8 @@ Info (12133): Instantiated megafunction "PROCESADOR:UUT|instruction_memory:instM
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_omg1.tdf
     Info (12023): Found entity 1: altsyncram_omg1 File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_omg1" for hierarchy "PROCESADOR:UUT|instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "_control_unit" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 58
+Info (12128): Elaborating entity "altsyncram_omg1" for hierarchy "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "_control_unit" for hierarchy "_control_unit:contUnit" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 58
 Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe2", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
 Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_Rwe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
 Warning (10240): Verilog HDL Always Construct warning at _control_unit.sv(36): inferring latch(es) for variable "aux_imWe", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
@@ -460,17 +857,17 @@ Info (10041): Inferred latch for "aux_dmWe" at _control_unit.sv(36) File: C:/Use
 Info (10041): Inferred latch for "aux_imWe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
 Info (10041): Inferred latch for "aux_Rwe" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
 Info (10041): Inferred latch for "aux_Rwe2" at _control_unit.sv(36) File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 36
-Info (12128): Elaborating entity "muxControl" for hierarchy "PROCESADOR:UUT|_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 32
-Info (12128): Elaborating entity "_register_file" for hierarchy "PROCESADOR:UUT|_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 59
-Info (12128): Elaborating entity "muxRI" for hierarchy "PROCESADOR:UUT|_register_file:regFile|muxRI:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 17
-Info (12128): Elaborating entity "data_memory" for hierarchy "PROCESADOR:UUT|data_memory:dataMemory" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 60
+Info (12128): Elaborating entity "muxControl" for hierarchy "_control_unit:contUnit|muxControl:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_control_unit.sv Line: 32
+Info (12128): Elaborating entity "_register_file" for hierarchy "_register_file:regFile" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 59
+Info (12128): Elaborating entity "muxRI" for hierarchy "_register_file:regFile|muxRI:mc" File: C:/Users/emily/Desktop/CE4301-Proyecto1/_register_file.sv Line: 17
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:dataMemory" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 60
 Warning (10850): Verilog HDL warning at data_memory.sv(12): number of words (0) in memory file does not match the number of elements in the address range [0:1999] File: C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv Line: 12
 Warning (10175): Verilog HDL warning at data_memory.sv(19): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/data_memory.sv Line: 19
-Info (12128): Elaborating entity "image_cruda_memory" for hierarchy "PROCESADOR:UUT|image_cruda_memory:icm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 62
+Info (12128): Elaborating entity "image_cruda_memory" for hierarchy "image_cruda_memory:icm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 62
 Warning (10030): Net "memory.data_a" at image_cruda_memory.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv Line: 10
 Warning (10030): Net "memory.waddr_a" at image_cruda_memory.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv Line: 10
 Warning (10030): Net "memory.we_a" at image_cruda_memory.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_cruda_memory.sv Line: 10
-Info (12128): Elaborating entity "imRAddress4" for hierarchy "PROCESADOR:UUT|imRAddress4:imRA" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 63
+Info (12128): Elaborating entity "imRAddress4" for hierarchy "imRAddress4:imRA" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 63
 Warning (10240): Verilog HDL Always Construct warning at imRAddress4.sv(10): inferring latch(es) for variable "aux", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
 Info (10041): Inferred latch for "aux[0]" at imRAddress4.sv(10) File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
 Info (10041): Inferred latch for "aux[1]" at imRAddress4.sv(10) File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
@@ -504,11 +901,11 @@ Info (10041): Inferred latch for "aux[28]" at imRAddress4.sv(10) File: C:/Users/
 Info (10041): Inferred latch for "aux[29]" at imRAddress4.sv(10) File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
 Info (10041): Inferred latch for "aux[30]" at imRAddress4.sv(10) File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
 Info (10041): Inferred latch for "aux[31]" at imRAddress4.sv(10) File: C:/Users/emily/Desktop/CE4301-Proyecto1/imRAddress4.sv Line: 10
-Info (12128): Elaborating entity "image_procesada_memory" for hierarchy "PROCESADOR:UUT|image_procesada_memory:ipm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 65
+Info (12128): Elaborating entity "image_procesada_memory" for hierarchy "image_procesada_memory:ipm" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 65
 Warning (10036): Verilog HDL or VHDL warning at image_procesada_memory.sv(8): object "memory" assigned a value but never read File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 8
 Warning (10175): Verilog HDL warning at image_procesada_memory.sv(22): ignoring unsupported system task File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 22
 Warning (10034): Output port "RD" at image_procesada_memory.sv(6) has no driver File: C:/Users/emily/Desktop/CE4301-Proyecto1/image_procesada_memory.sv Line: 6
-Info (12128): Elaborating entity "alu" for hierarchy "PROCESADOR:UUT|alu:myAlu" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 69
+Info (12128): Elaborating entity "alu" for hierarchy "alu:myAlu" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 69
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(40): inferring latch(es) for variable "aux_s", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(40): inferring latch(es) for variable "aux_seq", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(40): inferring latch(es) for variable "aux_slt", which holds its previous value in one or more paths through the always construct File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
@@ -535,23 +932,66 @@ Info (10041): Inferred latch for "aux_sgt" at alu.sv(40) File: C:/Users/emily/De
 Info (10041): Inferred latch for "aux_slt" at alu.sv(40) File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
 Info (10041): Inferred latch for "aux_seq" at alu.sv(40) File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
 Info (10041): Inferred latch for "aux_s" at alu.sv(40) File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 40
-Info (12128): Elaborating entity "division" for hierarchy "PROCESADOR:UUT|alu:myAlu|division:myDiv" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 18
-Info (12128): Elaborating entity "bor" for hierarchy "PROCESADOR:UUT|alu:myAlu|bor:myOr" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 19
-Info (12128): Elaborating entity "band" for hierarchy "PROCESADOR:UUT|alu:myAlu|band:myband" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 20
-Info (12128): Elaborating entity "mult" for hierarchy "PROCESADOR:UUT|alu:myAlu|mult:myMulti" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 21
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/emily/Desktop/CE4301-Proyecto1/tb_procesador.sv Line: 7
+Info (12128): Elaborating entity "division" for hierarchy "alu:myAlu|division:myDiv" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 18
+Info (12128): Elaborating entity "bor" for hierarchy "alu:myAlu|bor:myOr" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 19
+Info (12128): Elaborating entity "band" for hierarchy "alu:myAlu|band:myband" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 20
+Info (12128): Elaborating entity "mult" for hierarchy "alu:myAlu|mult:myMulti" File: C:/Users/emily/Desktop/CE4301-Proyecto1/alu.sv Line: 21
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[8]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 211
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[9]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 233
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[10]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 255
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[11]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 277
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[12]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 299
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[13]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 321
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[14]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 343
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[15]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 365
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[25]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 585
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[0]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 35
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[1]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 57
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[2]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 79
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[3]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 101
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[4]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 123
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[5]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 145
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[6]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 167
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[7]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 189
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[16]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 387
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[17]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 409
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[18]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 431
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[19]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 453
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[20]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 475
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[21]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 497
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[22]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 519
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[23]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 541
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[24]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 563
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[26]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 607
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[27]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 629
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[28]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 651
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[29]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 673
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[30]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 695
+        Warning (14320): Synthesized away node "instruction_memory:instMem|instr_mem:ROM|altsyncram:altsyncram_component|altsyncram_omg1:auto_generated|q_a[31]" File: C:/Users/emily/Desktop/CE4301-Proyecto1/db/altsyncram_omg1.tdf Line: 717
+Info (17049): 296 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Tue Nov 17 11:21:29 2020
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 3
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/emily/Desktop/CE4301-Proyecto1/PROCESADOR.sv Line: 5
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Tue Nov 17 12:19:51 2020
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Total CPU time (on all processors): 00:00:30
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/emily/Desktop/CE4301-Proyecto1/output_files/procesador.map.smsg.
 
 
